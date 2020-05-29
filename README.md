@@ -1,7 +1,9 @@
+# Image Classification Demo
+
 Run with the command
 
-````
-yarn 
+````bash
+yarn
 yarn watch
 ````
 

@@ -6,7 +6,8 @@
   "main": "index.js",
   "scripts": {
     "watch": "cross-env NODE_ENV=development parcel index.html --no-hmr --open ",
-    "build": "cross-env NODE_ENV=production parcel build index.html --public-url ./"
+    "build": "cross-env NODE_ENV=production parcel build index.html --public-url ./",
+    "start": "node server.js"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
@@ -19,12 +20,10 @@
     "yalc": "~1.0.0-pre.27"
   },
   "dependencies": {
-    "@tensorflow/tfjs-automl": "^1.0.0",
-    "@tensorflow/tfjs-converter": "^1.2.8",
-    "@tensorflow/tfjs-core": "^1.2.8",
     "connect": "^3.7.0",
     "express": "^4.17.1",
     "express-generator": "^4.16.1",
+    "path": "^0.12.7",
     "serve-static": "^1.14.1"
   },
   "license": "Apache-2.0",

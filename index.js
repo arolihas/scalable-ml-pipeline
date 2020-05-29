@@ -15,17 +15,13 @@
  * =============================================================================
  */
 
-import * as automl from '@tensorflow/tfjs-automl';
-
-const MODEL_URL =
-	'https://storage.googleapis.com/scalepipe_models/model-export/icn/tf_js-scene_v1_edge-2020-05-28T20:23:55.321Z/model.json'
-  //'models/scene_v1_edge/model.json'
+const MODEL_URL = './models/scene_v1_edge/model.json'
 async function classify() {
   // Avoid duplicate request
   if (document.getElementsByTagName('pre').length > 0) {
     return
   }
-  const model = await automl.loadImageClassification(MODEL_URL);
+  const model = await tf.automl.loadImageClassification(MODEL_URL);
   const image = document.getElementById('scene');
   const predictions = await model.classify(image);
 
