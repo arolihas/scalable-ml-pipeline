@@ -15,7 +15,28 @@
  * =============================================================================
  */
 
+// import constants from './config/constants'
+// import firebase from 'firebase'
+
 const MODEL_URL = './models/scene_v1_edge/model.json'
+
+async function upload(input) {
+  if (input.target.files.length > 0) {
+    document.getElementById('scene').src = URL.createObjectURL(input.target.files[0])
+  }
+  // const ref = firebase.storage().ref()
+  // const name = (+new Date()) + '-' + File.name
+  // const metadata = { contentType: File.type }
+  // const task = ref.child(name).put(file, metadata)
+  // task
+  //   .then(snapshot => snapshot.ref.getDownloadURL())
+  //   .then((url) => {
+  //     console.log.lg(url)
+  //     document.querySelector('scene').src = url
+  //   })
+  //   .catch(console.error)
+}
+
 async function classify() {
   // Avoid duplicate request
   if (document.getElementsByTagName('pre').length > 0) {
@@ -32,3 +53,4 @@ async function classify() {
 }
 
 document.getElementById('classifier').onclick = classify.bind();
+document.getElementById('uploader').onchange = upload.bind();

@@ -9,7 +9,10 @@
   <div>
     <h2>Image Classification Demo</h2>
     <div>
-      <img id="scene" src="images/glacier.jpg">
+      <input id="uploader" type="file"></input>
+    </div>
+    <div>
+      <img id="scene" src="#" alt="">
     </div>
     <div>
       <button id="classifier">Classify Image</button>
@@ -20,6 +23,6 @@
   </div>
   <script src="https://unpkg.com/@tensorflow/tfjs"></script>
   <script src="https://unpkg.com/@tensorflow/tfjs-automl"></script>
-  <script type="module" src="index.js"></script>
+  <script src="index.js" type="module"></script>
 </body>
 </html>
