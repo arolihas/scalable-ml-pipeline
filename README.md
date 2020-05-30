@@ -1,7 +1,7 @@
 # Image Classification Demo
 
 Express.js server on the backend, HTML/CSS + vanilla js on the frontend. 
-Model developed and trained with Google Cloud AutoML Vision on data from [https://www.kaggle.com/puneet6060/intel-image-classification](this competition).
+Model developed and trained with Google Cloud AutoML Vision on data from [this competition](https://www.kaggle.com/puneet6060/intel-image-classification).
 
 Run with the command
 
